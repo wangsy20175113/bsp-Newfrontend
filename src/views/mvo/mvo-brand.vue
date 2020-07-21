@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="app-container">
-<!--公司信息-->
+
     <el-col :span = '20' class = 'toolbar'>
       <p v-text ='head'></p>
     </el-col>
@@ -55,7 +55,7 @@
         <br>
       <el-button type="primary" @click="showaddBrand" plain icon="el-icon-plus" style="margin-left:90px">Add</el-button>
     <el-button type="primary"  size="small" style="margin-left:50px"  @click="deleteAll" >DeleteAll</el-button>
- <el-button type="text" @click="goback"  style="margin-left:10px">Go Back</el-button>
+
  <!--添加brand弹窗-->
     <el-dialog title='Add Brand' :visible.sync = 'dialogVisible1' width = '50%' :close-on-lick-modal = 'false'>
       <el-form :model = 'BrandData'  ref = 'BrandData' label-width = '0px' class = ''>
@@ -215,11 +215,7 @@ export default {
       console.log(this.brandList)
       })
     },
-    goback(){
-         this.$router.push({
-        name: 'mvo-mycompany'
-      })
-    },
+
     showaddBrand(){
       this.dialogVisible1 = true
       this.BrandData.name_en = ''
